@@ -26,11 +26,7 @@ sudo cp /etc/nova/nova.conf /etc/nova/nova.conf.bka
 
 sudo sed -i "s/10.10.10.11:/$VIP:/g"  /etc/nova/nova.conf
 
-sudo sed -i "s/novncproxy_base_url = http:\/\/10.10.10.15:6080\/vnc_auto.html/\
-novncproxy_base_url = http:\/\/$VIP:6080\/vnc_auto.html/g"\
-/etc/nova/nova.conf
-
-sudo sed -i "s/rabbit_hosts = 10.10.10.11/rabbit_hosts = 10.10.10.11,10.10.10.12,10.10.10.13/g"\
+sudo sed -i "s/rabbit_hosts = 10.10.10.11/rabbit_hosts = 10.10.10.11,10.10.10.12,10.10.10.13/g" \
 /etc/nova/nova.conf
 
 ####
