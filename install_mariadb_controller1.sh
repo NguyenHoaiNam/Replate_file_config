@@ -12,3 +12,5 @@ sudo apt-get update
 sudo apt-get install mariadb-galera-server galera
 
 sudo sed -i 's/bind-address/#bind-address/g' /etc/mysql/my.cnf
+
+echo "Next steps: Configure Cluster_MariaBD"
