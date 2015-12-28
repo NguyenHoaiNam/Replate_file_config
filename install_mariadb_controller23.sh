@@ -4,7 +4,7 @@ mysql -uroot -pabc123 -h$IP -e "DROP DATABASE neutron;"
 mysql -uroot -pabc123 -h$IP -e "DROP DATABASE keystone;"
 mysql -uroot -pabc123 -h$IP -e "DROP DATABASE glance;"
 mysql -uroot -pabc123 -h$IP -e "DROP DATABASE nova;"
-mysql -uroot -pabc123 -h$IP -e "DROP DATABASE nova-api;"
+mysql -uroot -pabc123 -h$IP -e "DROP DATABASE nova_api;"
 
 echo "Finished drop BD, next step is install MariaBD"
 sudo apt-get purge -y mysql*
