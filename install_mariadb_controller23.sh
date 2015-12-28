@@ -1,10 +1,10 @@
 echo "Nhap IP mysql:"
 read IP
-mysql -uroot -pabc123 -h$IP -e "DROP DATABASE neutron;"
-mysql -uroot -pabc123 -h$IP -e "DROP DATABASE keystone;"
-mysql -uroot -pabc123 -h$IP -e "DROP DATABASE glance;"
-mysql -uroot -pabc123 -h$IP -e "DROP DATABASE nova;"
-mysql -uroot -pabc123 -h$IP -e "DROP DATABASE nova_api;"
+mysql -uroot -pabc123 -h$IP -e "DROP DATABASE IF EXISTS neutron;"
+mysql -uroot -pabc123 -h$IP -e "DROP DATABASE IF EXISTS keystone;"
+mysql -uroot -pabc123 -h$IP -e "DROP DATABASE IF EXISTS glance;"
+mysql -uroot -pabc123 -h$IP -e "DROP DATABASE IF EXISTS nova;"
+mysql -uroot -pabc123 -h$IP -e "DROP DATABASE IF EXISTS nova_api;"
 
 echo "Finished drop BD, next step is install MariaBD"
 sudo apt-get purge -y mysql*
