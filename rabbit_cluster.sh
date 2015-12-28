@@ -14,11 +14,11 @@ sudo service rabbitmq-server stop
 # sudo service rabbitmq-server start
 ##
 # On node 2,3
-# rabbitmqctl stop_app
-# rabbitmqctl join_cluster rabbit@controller1
-# rabbitmqctl start_app
-# rabbitmqctl cluster_status
+# sudo rabbitmqctl stop_app
+# sudo rabbitmqctl join_cluster rabbit@controller1
+# sudo rabbitmqctl start_app
+# sudo rabbitmqctl cluster_status
 ########
 ### On node 1, create rabbit user:
 # sudo rabbitmqctl add_user stackrabbit abc123
-# rabbitmqctl set_permissions openstack ".*" ".*" ".*"
+# sudo rabbitmqctl set_permissions  stackrabbit ".*" ".*" ".*"
